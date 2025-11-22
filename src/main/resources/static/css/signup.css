@@ -1,0 +1,170 @@
+/* Body & background */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1a1a1a, #002f6c);
+    margin: 0;
+    padding: 10px;
+}
+
+/* Signup form container */
+.signup-form {
+    background: rgba(0, 31, 77, 0.85);
+    padding: 40px 30px;
+    border-radius: 25px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+    width: 100%;
+    max-width: 450px;
+    max-height: 90vh; /* prevent stretching beyond viewport */
+    color: #fff;
+    backdrop-filter: blur(12px);
+    text-align: center;
+    overflow: auto; /* enable scrolling if needed */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE 10+ */
+    transition: all 0.4s ease-in-out;
+}
+.signup-form::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
+}
+
+/* Title */
+.signup-form h2 {
+    font-size: 30px;
+    font-weight: bold;
+    color: #FFD700;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+}
+
+/* Input groups */
+.input-group {
+    position: relative;
+    margin-bottom: 18px;
+}
+.input-group i {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #FFD700;
+}
+.input-group input,
+.input-group select {
+    width: 100%;
+    padding: 14px 12px 14px 40px;
+    border-radius: 30px;
+    font-size: 15px;
+    border: 1px solid rgba(255, 215, 0, 0.5);
+    background: rgba(255, 255, 255, 0.1);
+    color: #FFD700;
+    outline: none;
+    appearance: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.input-group input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+    font-style: italic;
+}
+
+/* Dropdown options */
+.input-group select option {
+    background: #001f4d;
+    color: #FFD700;
+    font-weight: bold;
+}
+
+/* Submit button */
+.signup-form input[type="submit"] {
+    width: 100%;
+    padding: 16px;
+    border-radius: 30px;
+    border: none;
+    font-weight: bold;
+    font-size: 17px;
+    color: #001f4d;
+    background: #FFD700;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+.signup-form input[type="submit"]:hover {
+    background: #e6c200;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(255, 215, 0, 0.6);
+}
+
+/* Role selection */
+.role-section {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    align-items: center;
+    color: #FFD700;
+    font-weight: bold;
+    margin: 15px 0 20px 0;
+}
+
+/* Driver fields */
+.driver-fields {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.1s ease, opacity 0.1s ease, margin 0.1s ease; /* instant show/hide */
+    margin-top: 0;
+}
+.driver-fields.show {
+    max-height: 250px;
+    opacity: 1;
+    margin-top: 15px;
+    overflow-y: auto;
+}
+
+/* Messages */
+.message {
+    text-align: center;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+.error { color: #ff4d4d; }
+.success { color: #90ee90; }
+
+/* Signin link */
+.signin-link {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
+.signin-link a {
+    color: #FFD700;
+    text-decoration: none;
+    font-weight: bold;
+}
+.signin-link a:hover {
+    text-decoration: underline;
+    color: #fff;
+}
+
+/* Responsive adjustments */
+@media (max-height: 700px) {
+    .signup-form {
+        padding: 30px 20px;
+        max-height: 85vh;
+    }
+    .driver-fields.show {
+        max-height: 200px;
+    }
+}
+
+/* Hide all scrollbars */
+* {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE 10+ */
+}
+*::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
+}

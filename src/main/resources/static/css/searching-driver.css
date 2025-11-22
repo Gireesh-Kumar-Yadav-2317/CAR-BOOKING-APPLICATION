@@ -1,0 +1,83 @@
+/* ===== Global Body ===== */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1a1a1a, #002f6c); /* Dark blue gradient */
+    color: #FFD700; /* Golden text for everything */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* ===== Container Card ===== */
+.container {
+    background: rgba(10, 20, 50, 0.92); /* Semi-transparent dark card */
+    padding: 30px 25px;
+    border-radius: 20px;
+    width: 420px;
+    max-width: 90%;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.8s ease-in-out;
+    color: #FFD700; /* Ensure container text is golden */
+}
+
+/* ===== Heading & Status ===== */
+#status-heading {
+    font-size: 24px;
+    margin-bottom: 12px;
+    font-weight: bold;
+    color: #FFD700; /* Golden */
+}
+
+#status-message {
+    font-size: 16px;
+    margin-bottom: 25px;
+    color: #FFD700; /* Golden */
+}
+
+/* ===== Spinner ===== */
+.spinner {
+    margin: 20px auto;
+    width: 60px;
+    height: 60px;
+    border: 6px solid rgba(255, 255, 255, 0.2);
+    border-top: 6px solid #FFD700; /* Golden spinner top */
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+/* ===== Driver Card ===== */
+.driver-card {
+    margin-top: 25px;
+    padding: 20px;
+    background: rgba(10, 20, 50, 0.8); /* Dark card */
+    border: 1px solid #FFD700; /* Golden border */
+    border-radius: 12px;
+    color: #FFD700; /* All text golden */
+    transition: all 0.3s ease;
+}
+
+.driver-card h3 {
+    margin: 8px 0;
+    font-size: 18px;
+    color: #FFD700; /* Golden */
+}
+
+/* ===== Hidden ===== */
+.hidden {
+    display: none;
+}
+
+/* ===== Animations ===== */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}

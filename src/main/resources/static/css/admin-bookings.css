@@ -1,0 +1,175 @@
+/* ===== Page Background ===== */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #0b1a2a, #001f4d);
+    color: #f5f5f5;
+}
+
+/* Home button */
+.btn-home {
+    position: fixed;
+    top: 15px;
+    right: 20px;
+    padding: 6px 12px;
+    border-radius: 16px;
+    background: #f0c040;
+    color: #001f4d;
+    font-weight: bold;
+    font-size: 13px;
+    border: none;
+    cursor: pointer;
+    z-index: 1000;
+}
+.btn-home:hover {
+    background: #d4a800;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(240,192,64,0.5);
+}
+
+/* Heading */
+h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #f0c040;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* ===== Filter Box ===== */
+.filter-box {
+    background: rgba(0,31,77,0.75);
+    backdrop-filter: blur(10px);
+    padding: 12px 15px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    width: 95%;
+    max-width: 900px;
+    margin: 10px auto;
+    overflow: auto;
+}
+
+/* Filter Form - all inputs side by side */
+.filter-box form {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 12px; /* space between each filter */
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* Filter Items (City, Status, Dates) */
+.filter-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 110px; /* slightly smaller for compact look */
+}
+
+.filter-item label {
+    margin-bottom: 2px;
+    font-weight: bold;
+    color: #f0c040;
+    font-size: 12px;
+}
+
+/* Inputs & Dropdowns - uniform size */
+.filter-item select,
+.filter-item input[type="date"] {
+    width: 110px;
+    height: 28px;
+    padding: 2px 6px;
+    border-radius: 8px;
+    font-size: 12px;
+    border: 1px solid rgba(240,192,64,0.5);
+    background: rgba(0,31,77,0.85);
+    color: #f0c040;
+    outline: none;
+    cursor: pointer;
+}
+
+/* Filter Button - same height as inputs, aligned right */
+.filter-button-container {
+    margin-left: auto; /* push button to far right */
+}
+
+.btn-filter {
+    height: 28px; /* same as inputs */
+    padding: 0 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 12px;
+    background: #f0c040;
+    color: #001f4d;
+    border: none;
+    cursor: pointer;
+}
+.btn-filter:hover {
+    background: #d4a800;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(240,192,64,0.5);
+}
+
+/* ===== Bookings Table ===== */
+.bookings-table {
+    width: 95%;
+    max-width: 900px;
+    margin: 20px auto 0 auto;
+    border-collapse: collapse;
+    color: #f0c040;
+    font-size: 13px;
+    background: rgba(0,31,77,0.55);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+.bookings-table th,
+.bookings-table td {
+    border: 1px solid rgba(240,192,64,0.4);
+    padding: 8px 10px;
+    text-align: center;
+}
+
+.bookings-table th {
+    background: rgba(240,192,64,0.1);
+    font-weight: bold;
+}
+
+.bookings-table tr:nth-child(even) {
+    background: rgba(255,255,255,0.03);
+}
+
+/* No Data */
+.no-data {
+    text-align: center;
+    color: #f0c040;
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 750px) {
+    .filter-box form {
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+    .filter-item {
+        width: 100px;
+    }
+    .filter-button-container {
+        margin-left: 0;
+        margin-top: 4px;
+        width: 100%;
+    }
+    .btn-filter {
+        width: 100%;
+    }
+}

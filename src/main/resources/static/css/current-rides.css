@@ -1,0 +1,88 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #1a1a1a, #002f6c);
+    color: #FFD700;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.page-title {
+    margin-top: 25px;
+    color: #FFD700;
+}
+
+.ride-card {
+    background: #001f4d;
+    border: 2px solid #FFD700;
+    border-radius: 12px;
+    padding: 20px;
+    width: 320px;
+    margin: 20px auto;
+    box-shadow: 0 0 15px #FFD700; /* Glowing shadow */
+    transition: transform 0.2s, opacity 0.5s, box-shadow 0.3s;
+}
+
+.card-actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+/* Unified Start and Complete Buttons with shadow */
+.ride-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 0;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 140px;
+    height: 45px;
+    transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+    background-color: #FFD700; /* Golden yellow */
+    color: #000;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(255, 215, 0, 0.6); /* Glowing shadow */
+}
+
+.ride-btn i {
+    margin-right: 8px;
+}
+
+/* Hover effect */
+.ride-btn:hover:enabled {
+    background-color: #FFC300; /* Slightly darker golden */
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(255, 215, 0, 0.8); /* Stronger glow */
+}
+
+/* Disabled Complete Button */
+.btn-complete:disabled {
+    background-color: #FFE066; /* Lighter golden */
+    box-shadow: 0 4px 8px rgba(255, 215, 0, 0.4);
+    cursor: not-allowed;
+}
+
+/* Back Button */
+.btn-back-home {
+    margin: 25px 0;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: none;
+    background-color: #FFD700;
+    color: #000;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgba(255, 215, 0, 0.6); /* Glowing shadow */
+}
+
+.btn-back-home:hover {
+    background-color: #FFC300;
+    box-shadow: 0 6px 12px rgba(255, 215, 0, 0.8); /* Stronger glow */
+}

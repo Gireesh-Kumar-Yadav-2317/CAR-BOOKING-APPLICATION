@@ -1,0 +1,46 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1a1a1a, #002f6c);
+    margin: 0;
+}
+
+.ride-card {
+    background: rgba(0, 31, 63, 0.8);
+    padding: 40px;
+    border-radius: 20px;
+    width: 420px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.6);
+    color: white;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease-in-out;
+}
+
+.ride-card:hover { transform: translateY(-5px); }
+
+.ride-card h2 {
+    margin-bottom: 20px;
+    font-size: 26px;
+    color: #FFD700; /* golden yellow */
+}
+
+.ride-card p {
+    margin: 10px 0;
+    font-size: 16px;
+    color: white;
+}
+
+.ride-card p strong {
+    color: #FFD700; /* golden yellow labels */
+}
+
+.message {
+    color: #00FF7F; /* green for success/info messages */
+    font-weight: bold;
+    margin-top: 15px;
+    font-size: 14px;
+}

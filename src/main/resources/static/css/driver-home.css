@@ -1,0 +1,130 @@
+/* ===== FULL SCREEN CENTER ===== */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #1a1a1a, #002f6c);
+    color: #FFD700;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;   /* horizontally center */
+    align-items: center;       /* vertically center */
+}
+
+/* Wrapper to ensure card is centered */
+.center-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* ===== DRIVER PROFILE CARD ===== */
+.profile-card {
+    width: 320px;
+    background: rgba(0, 31, 63, 0.85);
+    border: 2px solid #FFD700;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 0 15px #FFD700;
+    text-align: center;
+}
+
+/* ===== Golden Buttons (used inside popup) ===== */
+.btn-accept, .btn-reject {
+    flex: 1;
+    margin: 0 5px;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 15px;
+    background-color: #FFD700;
+    color: #000;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    transition: background-color 0.2s, transform 0.2s;
+}
+.btn-accept:hover, .btn-reject:hover {
+    background-color: #FFC300;
+    transform: scale(1.05);
+}
+
+/* ===== Popup Overlay ===== */
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+.popup-box {
+    background: #001f4d;  /* royal navy */
+    border: 2px solid #FFD700;
+    border-radius: 12px;
+    padding: 20px;
+    color: #FFD700;
+    box-shadow: 0 0 15px #FFD700;
+    text-align: center;
+    animation: slideDown 0.3s ease-out;
+}
+.popup-actions {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-around;
+}
+@keyframes slideDown {
+    from { transform: translateY(-30px); opacity: 0; }
+    to   { transform: translateY(0);     opacity: 1; }
+}
+
+/* ===== TOP BAR ===== */
+.top-bar {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end; /* Align items to the right */
+    padding: 15px 30px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: rgba(10, 20, 50, 0.85); /* semi-transparent dark */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    z-index: 1000;
+}
+
+/* ===== LOGOUT BUTTON TOP-RIGHT ONLY ===== */
+.logout-btn {
+    position: fixed;                 /* fixed relative to viewport */
+    top: 15px;                       /* distance from top */
+    right: 15px;                     /* distance from right */
+    z-index: 1000;                    /* above all content */
+    background: linear-gradient(45deg, #FFD700, #FFA500); /* golden gradient */
+    color: #0a192f;                  /* dark text */
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logout-btn:hover {
+    background: #FFC300;             /* slightly darker gold */
+    transform: scale(1.08);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+}
+
+/* Icon inside button */
+.logout-btn .icon {
+    color: #0a192f;
+    font-size: 16px;
+}

@@ -1,0 +1,103 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1a1a1a, #002f6c);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container {
+    width: 450px;
+    padding: 40px;
+    border-radius: 20px;
+    background: rgba(10, 25, 70, 0.85); /* Card color */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+    border: 2px solid #FFD700;
+    color: #fff;
+    transition: transform 0.3s ease-in-out;
+}
+
+.form-container:hover {
+    transform: translateY(-6px);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #FFD700;
+    letter-spacing: 1.5px;
+    font-size: 28px;
+}
+
+.field {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.field i {
+    color: #FFD700;
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 12px;
+    font-size: 15px;
+    background-color: rgba(10, 25, 70, 0.85); /* Match form container */
+    color:  #FFD700;/* Golden Yellow Text */
+    border: 1px solid #666;
+    transition: 0.3s;
+    appearance: none; /* Remove default arrow styling */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+select:hover {
+    border-color: #FFD700;
+    box-shadow: 0 6px 15px rgba(255, 215, 0, 0.5);
+}
+
+option {
+    background-color: rgba(10, 25, 70, 0.85); /* Card color */
+    color: #FFD700;; /* White text inside dropdown */
+    padding: 8px;
+}
+
+option:hover {
+    background-color: #FFD700; /* Gold hover */
+    color: #0a192f; /* Dark text on gold */
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 15px;
+    background: linear-gradient(135deg, #FFD700, #FFA500);
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    color: #000;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #FFA500, #FFD700);
+    transform: scale(1.05);
+}
+
+.error {
+    text-align: center;
+    color: #FF5555;
+    margin-bottom: 15px;
+}
