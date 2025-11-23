@@ -7,10 +7,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class FaviconController {
 
-
-    @RequestMapping("favicon.ico")
+    @RequestMapping({"/favicon.ico", "/images/favicon.ico"})
     @ResponseBody
-    void favicon() {
+    void favicon() {}
 
-    }
 }
