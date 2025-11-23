@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Login</title>
+     <link rel="icon" type="image/x-icon" href="<c:url value='/images/favicon.ico' />"/>
     <link rel="stylesheet" href="<c:url value='/css/login.css' />"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
     <script src="<c:url value='/js/login.js' />"></script>
